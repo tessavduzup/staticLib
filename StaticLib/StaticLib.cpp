@@ -16,7 +16,7 @@ void sort(int* array, int arrLen)
 int searchElement(int* array, int arrLen, int index)
 {
     for (int i = 0; i < arrLen; i++) {
-        if (array[i] == index) {
+        if (i == index) {
             return array[i];
         }
     }
