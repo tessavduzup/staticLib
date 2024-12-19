@@ -5,17 +5,15 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "ru");
-    int arr[] = { 5, 3, 10, 1, 4 };
+    int arr[] = { 5, 31, 10, 12, 45 };
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // Выводим исходный массив
     cout << "Исходный массив: ";
     for (int i = 0; i < size; i++) {
         cout << arr[i] << " ";
     }
     cout << endl;
 
-    // Сортируем массив
     sort(arr, size);
     cout << "Отсортированный массив: ";
     for (int i = 0; i < size; i++) {
@@ -23,16 +21,17 @@ int main()
     }
     cout << endl;
 
-    // Ищем элемент в массиве
     int element;
     cout << "Введите элемент для поиска: ";
     cin >> element;
     int result = searchElement(arr, size, element);
     cout << "Полученный элемент: " << element << endl;
 
-    // Вычисляем среднее значение
     double avg = average(arr, size);
     cout << "Среднее значение элементов массива: " << avg << endl;
+
+    int countMoreThan10 = moreThan10(arr, size);
+    cout << "Кол-во чисел больше 10: " << countMoreThan10 << endl;
 
     return 0;
 }

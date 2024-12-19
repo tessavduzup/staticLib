@@ -34,3 +34,18 @@ double average(int* array, int arrLen)
     }
     return double(sum) / arrLen;
 }
+
+// считает кол-во чисел больше 10
+int moreThan10(int* array, int arrLen)
+{
+    if (arrLen == 0) return 0;
+
+    int count = 0;
+    for (int i = 0; i < arrLen; i++) {
+        if (array[i] > 10)
+        {
+            count += 1;
+        }
+    }
+    return count;
+}
